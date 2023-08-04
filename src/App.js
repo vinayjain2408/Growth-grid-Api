@@ -19,7 +19,7 @@ function App() {
           formData);
         const result = response.data;
         console.log('Success:', result.data.data);
-        // setFinalData(result.data.data);
+        setFinalData(result.data.data);
       } catch (error) {
         console.log('Error in API call:', error);
       }
@@ -113,101 +113,6 @@ export default App;
 
 
 
-// import React, { useEffect } from 'react';
-// import './App.css';
-// import axios from 'axios';
-
-// function App() {
-//   useEffect(() => {
-//     async function postJSON() {
-//       const formData = new FormData();
-//       formData.append('user_id', '1389');
-//       formData.append('fin_year', '2023-2024');
-//       formData.append('limit', 10);
-//       formData.append('page_number', 0);
-
-//       try {
-//         // Use the CORS-anywhere proxy before the target URL
-//         const response = await axios.post('https://cors-anywhere.herokuapp.com/https://api.growthgrids.com/bd_growthgrids/index.php/LatestTenders_fin_year',
-//           formData,
-//           {
-//             headers: {
-//               'Content-Type': 'application/json',
-//             },
-//           }
-//         );
-//         const result = response.data;
-//         console.log('Success:', result);
-//       } catch (error) {
-//         console.log('Error in API call:', error);
-//       }
-//     }
-
-//     postJSON();
-//   }, []);
-
-//   return (
-//     <div className="App">
-//       <h1>App</h1>
-//     </div>
-//   );
-// }
-
-// export default App;
-
-
-
-
-
-
-
-
-// import React, { useEffect ,useState } from 'react'; // Import React and useEffect
-// import './App.css';
-// import axios from 'axios';
-// function App() {
-
-//   // const [finalData , setFinalData] = useState([])
-
-//   useEffect(()=>{
-
-//     async function postJSON() {
-//       const formData = new FormData();
-//       formData.append('user_id', '1389');
-//       formData.append('fin_year', '2023-2024');
-//       formData.append('limit', 10);
-//       formData.append('page_number', 0);
-//       // for (const [key, value] of formData.entries()) {
-//       //   console.log(`${key}: ${value}`, 'tyu');
-//       // }
-//       try {
-//         const response = await axios.post(
-//           'https://api.growthgrids.com/bd_growthgrids/index.php/LatestTenders_fin_year',
-//           formData,
-//           {
-//             headers: {
-//               'Content-Type': 'application/json',
-//               "x-powered-by": "CORS Anywhere"
-//             },
-//           }
-//         );
-//         const result = response.data;
-//         console.log('Success:', result);
-//       } catch (error) {
-//         console.log("error in api call");
-//       }
-//     }
-//     postJSON()
-//   },[])
-
-//   return (
-//     <div className="App">
-//       <h1>App</h1>
-//     </div>
-//   );
-// }
-
-// export default App;
 
 
 
